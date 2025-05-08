@@ -18,8 +18,22 @@
             int[] cards = dealCards();
             bool gameWon = false;
             // add your code here
-
-
+            int count = 1;
+            for (int i = 0; i < 99; i++)
+            {
+                if (cards[i] == cards[i+1] - 1)
+                {
+                    count++;
+                }
+                if (count == 5)
+                {
+                    gameWon = true;
+                }
+                else
+                {
+                    count = 1;
+                }
+            }
             // end of your code
             Console.WriteLine(gameWon);
         }
